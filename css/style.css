@@ -248,3 +248,44 @@ textarea {
 body { font-family: Arial, sans-serif;
 margin: 40px;
 }
+
+/* ===== Migration helpers (replaces inline styles) ===== */
+
+/* common max-width container */
+.page-wrap {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 12px;
+}
+
+/* image should scale to container */
+.img-full {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* full height sidebar for menu page */
+.full-height {
+  min-height: 100vh;
+}
+
+/* simple top nav that works on all pages */
+.site-nav {
+  margin: 12px 0 18px;
+}
+.site-nav a {
+  text-decoration: none;
+  margin-right: 8px;
+}
+.page-wrap {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 12px;
+}
+
+.img-full {
+  width: 100%;
+  height: auto;
+  display: block;
+}
