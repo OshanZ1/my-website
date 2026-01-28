@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    html,body,h1,h2,h3,h4,h5,h6 {font-family:"Roboto", sans-serif}
+  </style>
+</head>
+
+<body class="w3-light-grey">
+
+<div class="w3-content w3-margin-top" style="max-width:900px;">
+  <div class="w3-container w3-card w3-white">
+    <h2 class="w3-text-grey w3-padding-16">
+      <i class="fa fa-envelope fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Contact Me
+    </h2>
+
+    <form action="#" method="post" class="w3-container w3-padding-16">
+      <label><b>Name</b></label>
+      <input class="w3-input w3-border w3-margin-bottom" type="text" name="name" required>
+
+      <label><b>Email</b></label>
+      <input class="w3-input w3-border w3-margin-bottom" type="email" name="email" required>
+
+      <label><b>Reason</b></label>
+      <select class="w3-select w3-border w3-margin-bottom" name="reason" required>
+        <option value="" disabled selected>Choose a reason</option>
+        <option value="job">Job Opportunity</option>
+        <option value="project">Project Collaboration</option>
+        <option value="inquiry">General Inquiry</option>
+      </select>
+
+      <label><b>Message</b></label>
+      <textarea class="w3-input w3-border w3-margin-bottom" name="message" rows="5" required></textarea>
+
+      <label class="w3-small">
+        <input class="w3-check" type="checkbox" name="agree" required>
+        I confirm the information above is correct.
+      </label>
+
+      <button class="w3-button w3-teal w3-margin-top" type="submit">
+        <i class="fa fa-paper-plane w3-margin-right"></i>Send Message
+      </button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
