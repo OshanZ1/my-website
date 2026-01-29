@@ -1,50 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Works</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Works | My Personal Website</title>
+
+  <!-- W3CSS + Fonts + Icons -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <style>
-    html,body,h1,h2,h3,h4,h5,h6 {font-family:"Roboto", sans-serif}
+    html, body, h1, h2, h3, h4, h5, h6 {
+      font-family: "Roboto", sans-serif;
+    }
+    body {
+      margin-top: 70px; /* space for fixed top nav */
+    }
   </style>
 </head>
+
 <body class="w3-light-grey">
-   <header>
-    <h1>My Personal Website</h1>
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a> |
-      <a href="works.html">Works</a> |
-      <a href="experience.html">Experience</a> |
-      <a href="education.html">Education</a> |
-      <a href="references.html">References</a> |
-      <a href="contact.html">Contact</a> |
-    </nav>
-  </header>
-<div class="w3-content w3-margin-top" style="max-width:900px;">
-  <div class="w3-container w3-card w3-white w3-margin-bottom">
-    <h2 class="w3-text-grey w3-padding-16">
-      <i class="fa fa-folder-open fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Works / Projects
-    </h2>
 
-    <div class="w3-container">
-      <h5 class="w3-opacity"><b>Portfolio Website</b></h5>
-      <p>Created a portfolio website using W3CSS and organized sections for easy navigation.</p>
-      <hr>
+  <!-- TOP NAVIGATION -->
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-card w3-padding">
+      <span class="w3-bar-item w3-large"><b>My Personal Website</b></span>
 
-      <h5 class="w3-opacity"><b>Inventory System (School Project)</b></h5>
-      <p>Built a simple inventory tracker with basic validation and search functions.</p>
-      <hr>
-
-      <h5 class="w3-opacity"><b>AI Mini Project</b></h5>
-      <p>Experimented with image classification and feature extraction concepts.</p>
-      <p class="w3-small w3-text-grey">(Replace these with your real projects if needed.)</p>
-      <br>
+      <div class="w3-right w3-hide-small">
+        <a href="index.html" class="w3-bar-item w3-button">Home</a>
+        <a href="about.html" class="w3-bar-item w3-button">About</a>
+        <a href="works.html" class="w3-bar-item w3-button w3-teal">Works</a>
+        <a href="experience.html" class="w3-bar-item w3-button">Experience</a>
+        <a href="education.html" class="w3-bar-item w3-button">Education</a>
+        <a href="references.html" class="w3-bar-item w3-button">References</a>
+        <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+      </div>
     </div>
   </div>
-</div>
+
+  <!-- PAGE CONTENT -->
+  <main class="w3-content w3-margin-top" style="max-width: 900px;">
+    <div class="w3-container w3-card w3-white w3-margin-bottom">
+
+      <h2 class="w3-text-grey w3-padding-16">
+        <i class="fa fa-folder-open fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>
+        Works / Projects
+      </h2>
+
+      <div class="w3-container">
+        <h5 class="w3-opacity"><b>Portfolio Website</b></h5>
+        <p>Created a portfolio website using W3CSS and organized sections for easy navigation.</p>
+        <hr>
+
+        <h5 class="w3-opacity"><b>Inventory System (School Project)</b></h5>
+        <p>Built a simple inventory tracker with basic validation and search functions.</p>
+        <hr>
+
+        <h5 class="w3-opacity"><b>AI Mini Project</b></h5>
+        <p>Experimented with image classification and feature extraction concepts.</p>
+
+        <p class="w3-small w3-text-grey">
+          (Replace these with your real projects if needed.)
+        </p>
+
+        <br>
+      </div>
+
+    </div>
+  </main>
 
 </body>
 </html>
