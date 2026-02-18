@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>My Personal Website | OshanZ1</title>
 
-  <!-- W3CSS + Icons + Your CSS -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -14,12 +13,44 @@
   <style>
     html, body, h1, h2, h3, h4, h5, h6 { font-family: "Roboto", sans-serif; }
     body { margin-top: 70px; } /* space for fixed top nav */
+
+    /* --- ANIMATION STYLES ADDED BELOW --- */
+    
+    /* 1. Define the animation: Slide up and Fade In */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px); /* Start 30px lower */
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0); /* End in original position */
+      }
+    }
+
+    /* 2. Class to apply the animation */
+    .fade-in {
+      opacity: 0; /* Initially hidden */
+      animation: fadeInUp 0.8s ease-out forwards; /* Lasts 0.8 seconds */
+    }
+
+    /* 3. Delays to make items appear one after another */
+    .delay-1 { animation-delay: 0.2s; } /* Clock appears first */
+    .delay-2 { animation-delay: 0.4s; } /* Profile appears second */
+
+    /* 4. Hover effect for the Profile Card */
+    .hover-effect {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hover-effect:hover {
+      transform: translateY(-5px); /* Moves up slightly on hover */
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* Shadow grows */
+    }
   </style>
 </head>
 
 <body class="w3-light-grey">
 
-  <!-- TOP NAVIGATION (same as your About/Works pages) -->
   <div class="w3-top">
     <div class="w3-bar w3-white w3-card w3-padding">
       <span class="w3-bar-item w3-large"><b>My Personal Website</b></span>
@@ -36,20 +67,17 @@
     </div>
   </div>
 
-  <!-- PAGE CONTENT -->
   <main class="w3-content w3-margin-top" style="max-width:900px;">
 
-    <!-- Live Clock -->
-    <div class="w3-card clock-card fade-in">
-      <div class="clock-title">Current Time</div>
-      <div id="liveClock" class="clock-time">00:00:00</div>
+    <div class="w3-card clock-card fade-in delay-1 w3-white w3-padding w3-margin-bottom w3-center">
+      <div class="clock-title w3-text-grey">Current Time</div>
+      <div id="liveClock" class="clock-time w3-xlarge">00:00:00</div>
     </div>
 
-    <!-- Profile Card -->
-    <div class="w3-white w3-card-4 w3-margin-bottom fade-in">
+    <div class="w3-white w3-card-4 w3-margin-bottom fade-in delay-2 hover-effect">
       <div class="w3-display-container">
-        <img src="img/oshanz.jpg" class="img-full" alt="Avatar">
-        <div class="w3-display-bottomleft w3-container w3-text-black">
+        <img src="img/oshanz.jpg" style="width:100%" alt="Avatar">
+        <div class="w3-display-bottomleft w3-container w3-text-white" style="text-shadow:1px 1px 0 #444">
           <h2>O'shan Zaballero</h2>
         </div>
       </div>
@@ -68,9 +96,8 @@
         </p>
       </div>
     </div>
-<div class="w3-white w3-card-4 w3-margin-bottom fade-in">
-  
-</div>
+
+    <div class="w3-white w3-card-4 w3-margin-bottom fade-in delay-2"></div>
 
   </main>
 
