@@ -1,66 +1,73 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Contact</title>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
-    html,body,h1,h2,h3,h4,h5,h6 {font-family:"Roboto", sans-serif}
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | My Personal Website</title>
+
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body class="w3-light-grey">
-     <header>
+<body>
+  <header class="page-wrap">
     <h1>My Personal Website</h1>
-    <nav>
+
+    <nav class="site-nav">
       <a href="index.html">Home</a> |
       <a href="about.html">About</a> |
       <a href="works.html">Works</a> |
       <a href="experience.html">Experience</a> |
       <a href="education.html">Education</a> |
       <a href="references.html">References</a> |
-      <a href="contact.html">Contact</a> |
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-<div class="w3-content w3-margin-top" style="max-width:900px;">
-  <div class="w3-container w3-card w3-white">
-    <h2 class="w3-text-grey w3-padding-16">
-      <i class="fa fa-envelope fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Contact Me
-    </h2>
+  <main class="page-wrap">
 
-    <form action="#" method="post" class="w3-container w3-padding-16">
-      <label><b>Name</b></label>
-      <input class="w3-input w3-border w3-margin-bottom" type="text" name="name" required>
+    <!-- Lab 6 Live Clock -->
+    <section class="clock-card fade-in">
+      <div class="clock-title">Current Time</div>
+      <div id="liveClock" class="clock-time">00:00:00</div>
+    </section>
 
-      <label><b>Email</b></label>
-      <input class="w3-input w3-border w3-margin-bottom" type="email" name="email" required>
+    <!-- Lab 6 Form Console Output -->
+    <section class="card fade-in">
+      <h2>Contact Me</h2>
 
-      <label><b>Reason</b></label>
-      <select class="w3-select w3-border w3-margin-bottom" name="reason" required>
-        <option value="" disabled selected>Choose a reason</option>
-        <option value="job">Job Opportunity</option>
-        <option value="project">Project Collaboration</option>
-        <option value="inquiry">General Inquiry</option>
-      </select>
+      <form id="contactForm">
+        <label for="fullName">Name</label>
+        <input id="fullName" type="text" required />
 
-      <label><b>Message</b></label>
-      <textarea class="w3-input w3-border w3-margin-bottom" name="message" rows="5" required></textarea>
+        <label for="email">Email</label>
+        <input id="email" type="email" required />
 
-      <label class="w3-small">
-        <input class="w3-check" type="checkbox" name="agree" required>
-        I confirm the information above is correct.
-      </label>
+        <label for="reason">Reason</label>
+        <select id="reason" required>
+          <option value="" disabled selected>Choose a reason</option>
+          <option>Job Opportunity</option>
+          <option>Project Collaboration</option>
+          <option>General Inquiry</option>
+        </select>
 
-      <button class="w3-button w3-teal w3-margin-top" type="submit">
-        <i class="fa fa-paper-plane w3-margin-right"></i>Send Message
-      </button>
-    </form>
-  </div>
-</div>
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" required></textarea>
 
+        <label class="checkbox-row">
+          <input id="confirmInfo" type="checkbox" />
+          I confirm the information above is correct.
+        </label>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <p class="hint">
+        (Lab 6) After clicking “Send Message”, open DevTools → Console to see the printed values.
+      </p>
+    </section>
+
+  </main>
+
+  <script src="js/app.js"></script>
 </body>
-
 </html>
