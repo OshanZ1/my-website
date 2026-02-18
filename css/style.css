@@ -1,234 +1,85 @@
-/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
 
-/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
 
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
+.card {
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  padding: 16px;
+  margin: 18px 0;
+  background: #fff;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- */
-
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
+.card label {
   display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
+  margin-top: 10px;
+  font-weight: 600;
 }
 
-/*
- * Remove the gap between media elements and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-  resize: vertical;
-}
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-.hidden,
-[hidden] {
-  display: none !important;
-}
-
-.visually-hidden {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
-.visually-hidden.focusable:active,
-.visually-hidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
-}
-
-.invisible {
-  visibility: hidden;
-}
-
-.clearfix::before,
-.clearfix::after {
-  content: "";
-  display: table;
-}
-
-.clearfix::after {
-  clear: both;
-}
-
-/* ==========================================================================
-   Responsive examples (optional)
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-   Print styles
-   ========================================================================== */
-
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
-
-  pre {
-    white-space: pre-wrap !important;
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-}
-
-
-/* Overall page font + reset default body spacing */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-}
-
-/* Common centered container (used in header and main) */
-.page-wrap {
-  max-width: 900px;
-  margin: 24px auto;
-  padding: 0 12px;
-}
-
-/* Nav spacing */
-.site-nav {
-  margin: 12px 0 18px;
-}
-
-.site-nav a {
-  text-decoration: none;
-}
-
-/* Image should scale to container */
-.img-full {
+.card input,
+.card select,
+.card textarea {
   width: 100%;
-  height: auto;
-  display: block;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
-/* Full height sidebar for menu page */
-.full-height {
-  min-height: 100vh;
+.card button {
+  margin-top: 14px;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.hint {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Clock design required by Lab 6 (fonts, colors, borders, background) */
+.clock-card {
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  background: #0f172a;
+  color: white;
+  margin: 18px 0;
+}
+
+.clock-title {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.clock-time {
+  margin-top: 8px;
+  font-family: "Courier New", monospace;
+  font-size: 2.4rem;
+  letter-spacing: 2px;
+  border-radius: 12px;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+  display: inline-block;
+}
+
+/* ===== ONE professional animation (fade-in) ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 550ms ease, transform 550ms ease;
+}
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
 }
