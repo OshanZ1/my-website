@@ -1,70 +1,104 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact | My Personal Website</title>
 
-  <link rel="stylesheet" href="css/style.css" />
+  
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    html, body, h1, h2, h3, h4, h5, h6 { font-family: "Roboto", sans-serif; }
+    body { margin-top: 70px; } /* space for fixed nav */
+  </style>
 </head>
 
-<body>
-  <header class="page-wrap">
-    <h1>My Personal Website</h1>
+<body class="w3-light-grey">
 
-    <nav class="site-nav">
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a> |
-      <a href="works.html">Works</a> |
-      <a href="experience.html">Experience</a> |
-      <a href="education.html">Education</a> |
-      <a href="references.html">References</a> |
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  <!-- TOP NAVIGATION -->
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-card w3-padding">
+      <span class="w3-bar-item w3-large"><b>My Personal Website</b></span>
 
-  <main class="page-wrap">
+      <div class="w3-right w3-hide-small">
+        <a href="index.html" class="w3-bar-item w3-button">Home</a>
+        <a href="about.html" class="w3-bar-item w3-button">About</a>
+        <a href="works.html" class="w3-bar-item w3-button">Works</a>
+        <a href="experience.html" class="w3-bar-item w3-button">Experience</a>
+        <a href="education.html" class="w3-bar-item w3-button">Education</a>
+        <a href="references.html" class="w3-bar-item w3-button">References</a>
+        <a href="contact.html" class="w3-bar-item w3-button w3-teal">Contact</a>
+      </div>
+    </div>
+  </div>
 
-    <!-- Lab 6 Live Clock -->
-    <section class="clock-card fade-in">
+  <!-- PAGE CONTENT -->
+  <main class="w3-content w3-margin-top" style="max-width: 900px;">
+
+    <!-- Live Clock -->
+    <div class="w3-card clock-card fade-in">
       <div class="clock-title">Current Time</div>
       <div id="liveClock" class="clock-time">00:00:00</div>
-    </section>
+    </div>
 
-    <!-- Lab 6 Form Console Output -->
-    <section class="card fade-in">
-      <h2>Contact Me</h2>
+    <!-- Contact Form Card -->
+    <div class="w3-container w3-card w3-white w3-margin-bottom fade-in">
+      <h2 class="w3-text-grey w3-padding-16">
+        <i class="fa fa-envelope fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Contact Me
+      </h2>
 
-      <form id="contactForm">
-        <label for="fullName">Name</label>
-        <input id="fullName" type="text" required />
+      <form id="contactForm" class="w3-container w3-padding-16">
 
-        <label for="email">Email</label>
-        <input id="email" type="email" required />
+        <p>
+          <label for="fullName"><b>Name</b></label>
+          <input id="fullName" class="w3-input w3-border w3-round" type="text" required>
+        </p>
 
-        <label for="reason">Reason</label>
-        <select id="reason" required>
-          <option value="" disabled selected>Choose a reason</option>
-          <option>Job Opportunity</option>
-          <option>Project Collaboration</option>
-          <option>General Inquiry</option>
-        </select>
+        <p>
+          <label for="email"><b>Email</b></label>
+          <input id="email" class="w3-input w3-border w3-round" type="email" required>
+        </p>
 
-        <label for="message">Message</label>
-        <textarea id="message" rows="5" required></textarea>
+        <p>
+          <label for="reason"><b>Reason</b></label>
+          <select id="reason" class="w3-select w3-border w3-round" required>
+            <option value="" disabled selected>Choose a reason</option>
+            <option>Job Opportunity</option>
+            <option>Project Collaboration</option>
+            <option>General Inquiry</option>
+          </select>
+        </p>
 
-        <label class="checkbox-row">
-          <input id="confirmInfo" type="checkbox" />
-          I confirm the information above is correct.
-        </label>
+        <p>
+          <label for="message"><b>Message</b></label>
+          <textarea id="message" class="w3-input w3-border w3-round" rows="5" required></textarea>
+        </p>
 
-        <button type="submit">Send Message</button>
+        <p class="w3-margin-top">
+          <label class="w3-text-grey">
+            <input id="confirmInfo" class="w3-check" type="checkbox">
+            I confirm the information above is correct.
+          </label>
+        </p>
+
+        <p>
+          <button type="submit" class="w3-button w3-teal w3-round">
+            <i class="fa fa-paper-plane"></i> Send Message
+          </button>
+        </p>
+
+        <p class="w3-small w3-text-grey">
+          (Lab 6) After clicking “Send Message”, open DevTools → Console to see the printed values.
+        </p>
+
       </form>
-
-      <p class="hint">
-        (Lab 6) After clicking “Send Message”, open DevTools → Console to see the printed values.
-      </p>
-    </section>
+    </div>
 
   </main>
 
