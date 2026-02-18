@@ -1,23 +1,25 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>My Personal Website | OshanZ1</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- W3CSS + Icons + Your CSS -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
 
-  <meta name="description" content="Personal website created for LBYCPG3 HTML and CSS laboratory activity.">
+  <style>
+    html, body, h1, h2, h3, h4, h5, h6 { font-family: "Roboto", sans-serif; }
+    body { margin-top: 70px; } /* space for fixed top nav */
+  </style>
 </head>
 
 <body class="w3-light-grey">
 
-  <!-- TOP NAVIGATION (same style as works.html) -->
+  <!-- TOP NAVIGATION (same as your About/Works pages) -->
   <div class="w3-top">
     <div class="w3-bar w3-white w3-card w3-padding">
       <span class="w3-bar-item w3-large"><b>My Personal Website</b></span>
@@ -35,7 +37,7 @@
   </div>
 
   <!-- PAGE CONTENT -->
-  <main class="w3-content w3-margin-top" style="max-width:900px; margin-top:80px;">
+  <main class="w3-content w3-margin-top" style="max-width:900px;">
 
     <!-- Live Clock -->
     <div class="w3-card clock-card fade-in">
@@ -43,7 +45,7 @@
       <div id="liveClock" class="clock-time">00:00:00</div>
     </div>
 
-    <!-- Main Profile Card -->
+    <!-- Profile Card -->
     <div class="w3-white w3-card-4 w3-margin-bottom fade-in">
       <div class="w3-display-container">
         <img src="img/oshanz.jpg" class="img-full" alt="Avatar">
@@ -69,8 +71,6 @@
 
   </main>
 
-  <!-- JavaScript -->
   <script src="js/app.js"></script>
-
 </body>
 </html>
