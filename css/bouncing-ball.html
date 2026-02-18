@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bouncing Ball</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .ball-area {
+      width: 420px;
+      height: 220px;
+      border: 2px solid #111827;
+      border-radius: 16px;
+      margin: 24px auto;
+      position: relative;
+      overflow: hidden;
+      background: #f1f5f9;
+    }
+    #ball {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #ef4444;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+  <main class="page-wrap">
+    <h1>Bouncing Ball Demo</h1>
+    <div class="ball-area">
+      <div id="ball"></div>
+    </div>
+  </main>
+
+  <script>
+    const ball = document.getElementById("ball");
+    const area = document.querySelector(".ball-area");
+
+    let x = 0, y = 0;
+    let vx = 3, vy = 3;
+
+    setInterval(() => {
+      const maxX = area.clientWidth - ball.clientWidth;
+      const maxY = area.clientHeight - ball.clientHeight;
+
+      x += vx;
+      y += vy;
+
+      if (x <= 0 || x >= maxX) vx *= -1;
+      if (y <= 0 || y >= maxY) vy *= -1;
+
+      ball.style.left = x + "px";
+      ball.style.top = y + "px";
+    }, 16);
+  </script>
+</body>
+</html>

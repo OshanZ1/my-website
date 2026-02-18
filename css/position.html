@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Position Demo</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    #box {
+      width: 140px;
+      height: 140px;
+      border-radius: 14px;
+      border: 2px solid #111827;
+      display: grid;
+      place-items: center;
+      margin: 24px;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <main class="page-wrap">
+    <h1>Element Position Demo</h1>
+    <div id="box">BOX</div>
+    <button id="checkPosBtn">Check Position</button>
+    <p class="hint">Open Console to see left/top values.</p>
+  </main>
+
+  <script>
+    document.getElementById("checkPosBtn").addEventListener("click", () => {
+      const box = document.getElementById("box");
+      const position = box.getBoundingClientRect();
+      console.log(position.left, position.top);
+    });
+  </script>
+</body>
+</html>
